@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag =="Enemy")
+        {
+            transform.position = new Vector3(0.0f, 0.5f, 0.0f);
+        }
         if (other.gameObject.tag == "Pickup")
         {
             other.gameObject.SetActive(false);
