@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private int count = 0;
     public Text winText;
     public GameObject ExitRamp;
+    public GameObject PlatformDoor;
 
     void FixedUpdate()
     {
@@ -35,9 +36,10 @@ public class PlayerController : MonoBehaviour
         }
         if (count >= 14)
         {
-            winText.gameObject.SetActive(true);
+            
             ExitRamp.SetActive(true);
         }
+        
     }
 
 }

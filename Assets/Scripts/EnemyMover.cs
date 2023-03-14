@@ -11,6 +11,6 @@ public class EnemyMover : MonoBehaviour {
     
     void Update()
     {
-        transform.position = new Vector3(direction * Mathf.PingPong(Time.time * speed, targetX * 2 ) * startingX * direction, transform.position.y, transform.position.z);
+        transform.position = new Vector3(direction * Mathf.PingPong(Time.time*speed, targetX * 2 ) + startingX * direction, transform.position.y, transform.position.z);
     }
 }
